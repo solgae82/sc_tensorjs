@@ -28,10 +28,10 @@
 		//2. 모델의 모양을 만듭니다.
 		var X = tf.input({shape: [13]}); //독립변수 13개
 		//------------------------Deep Learning(은닉층) 코드
-		var H = tf.layers.dense({units: 13, activation: 'relu'}).apply(X);
+		var H1 = tf.layers.dense({units: 13, activation: 'relu'}).apply(X);
 		
 		//2개의 은닉층을 만들고 싶으면, 아래처럼 연결하고 종속변수 구현 apply(H2)를 연결
-		var H2 = tf.layers.dense({units: 13, activation: 'relu'}).apply(H);
+		var H2 = tf.layers.dense({units: 13, activation: 'relu'}).apply(H1);
 		
 		//------------------------Deep Learning(은닉층) 코드 end
 		//은닉층 변수 'H' 를 apply해준다
